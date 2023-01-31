@@ -72,6 +72,40 @@
                 display: flex;
                 flex-direction: column;
             }
+
+            .section {
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            #search {
+                display: block;
+                width: 100%;
+                border: none;
+                font-size: 20px;
+                box-sizing: border-box;
+            }
+
+            #search:focus {
+                outline: none;
+            }
+
+            #floor {
+                clip-path: polygon(
+                    10% 0%,
+                    90% 0%,
+                    100% 100%,
+                    0% 100%
+                );
+                
+                width: 100%;
+                height: 40px;
+                background-color: rgba(0, 0, 0, 0.4);
+                margin-top: -30px;
+                z-index: -1;
+                position:relative;
+            }
         </style>
     </head>
     <body>
@@ -91,6 +125,10 @@
                     </div>
                 </div>
             </div>
+            <div id="floor"></div>
+            <input type="textinput" placeholder="search me" id="search">
+            <div class="section">Davis Night Market</div>
+            <div class="section">Motili</div>
         </div>
     </body>
 </html>
