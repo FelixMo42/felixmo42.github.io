@@ -42,6 +42,7 @@ function parse(source) {
             ),
             ...lines
                 .filter(line => !line.startsWith("!"))
+                .filter(line => line != "")
                 .map(line => el("div", line))
         )
     )
