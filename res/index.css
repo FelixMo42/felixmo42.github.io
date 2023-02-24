@@ -46,6 +46,10 @@ body {
     text-decoration: none;
 }
 
+.title div {
+    color: rgba(0, 0, 0, 0.5)
+}
+
 a {
     color: rgba(0, 0, 50, 0.75)
 }
