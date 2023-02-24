@@ -53,3 +53,11 @@ body {
 a {
     color: rgba(0, 0, 50, 0.75)
 }
+
+#bio {
+    margin-top: 0px;
+}
+
+#bio .title {
+    display: none;
+}
