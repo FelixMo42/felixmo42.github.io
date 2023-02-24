@@ -18,40 +18,70 @@ async function load_sections() {
     const snippets = await Promise.all(
         dir
             .sort((a, b) => Number(b.split(".")[0]) - Number(a.split(".")[0]))
-            .map((file_name) => load_snippet(`${path}/${file_name}`))
+            .map((file_name) => fs.readFile(`${path}/${file_name}`))
     )
     
-    return snippets.join("")
+    return snippets.map(f => f.toString()).map(parse).join("")
+}
+
+function get(lines, tag) {
+    return lines.find(line => line.startsWith(`!${tag} `)).split(" ").slice(1).join(" ")
+}
+
+function parse(source) {
+    let lines = source.split("\n")
+
+    let title = get(lines, "title")
+    let created = get(lines, "created")
+
+    return (
+        el('div class="section"',
+            el('div class="title"',
+                el('div', title),
+                el('div', created),
+            ),
+            ...lines
+                .filter(line => !line.startsWith("!"))
+                .map(line => el("div", line))
+        )
+    )
 }
 
 function stylesheet(href) {
     return `<link rel="stylesheet" href="${href}">`
 }
 
-async function main() {
+function el(tag, ...children) {
+    return `<${tag}>${children.join("")}</${tag.split(" ")[0]}>`
+}
+
+async function html() {
     const title = "Felix";
 
-    let text  = '<!DOCTYPE html>';
-        text += '<html>'
-        text +=     '<head>'
-        text +=         `<title>${title}</title>`
-        text +=         stylesheet("res/index.css")
-        text +=         stylesheet("res/title.css")
-        text +=         '<link rel="preconnect" href="https://fonts.googleapis.com">'
-        text +=         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-        text +=         stylesheet("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap")
-        text +=     '</head>'
-        text +=     '<body>'
-        text +=         '<div id="content">'
-        text +=             await load_snippet("./src/header.html")
-        text +=             '<div id="sections">'
-        text +=                 await load_sections()
-        text +=             '</div>'
-        text +=         '</div>'
-        text +=     '</body>'
-        text += '</html>'
+    return (
+        el('html',
+            el('head',
+                el("title", title), 
+                stylesheet("res/index.css"),
+                stylesheet("res/title.css"),
+                '<link rel="preconnect" href="https://fonts.googleapis.com">',
+                '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+                stylesheet("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"),
+            ),
+            el('body',
+                el('div id="content"',
+                    await load_snippet("./src/header.html"),
+                    el('body id="sections"',
+                        await load_sections()
+                    )
+                )
+            )
+        )
+    )
+}
 
-    fs.writeFile('index.html', text);
+async function main() {
+    fs.writeFile('index.html', '<!DOCTYPE html>' + await html());
 }
 
 main()
