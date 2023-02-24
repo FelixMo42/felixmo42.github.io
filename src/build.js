@@ -32,18 +32,22 @@ function parse(source) {
     let lines = source.split("\n")
 
     let title = get(lines, "title")
+    let id = get(lines, "id")
     let created = get(lines, "created")
 
     return (
-        el('div class="section"',
+        el(`div class="section" id="${id}"`,
             el('div class="title"',
                 el('div', title),
                 el('div', created),
             ),
             ...lines
                 .filter(line => !line.startsWith("!"))
-                .filter(line => line != "")
-                .map(line => el("div", line))
+                .map(line =>
+                        line == "" ? el('div class="br"') : 
+                        line.startsWith("-") ? el('div class="bullet"', line) :
+                            el("div", line)
+                    )
         )
     )
 }

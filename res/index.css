@@ -19,13 +19,18 @@ body {
 
 .section {
     background-color: rgba(0, 0, 0, 0.1);
-    padding: 5px 15px;
+    padding: 10px 15px;
     margin-top: 20px;
     font-family: 'Open Sans', sans-serif;
 }
 
-.section > div {
-    padding: 5px 0px;
+.br {
+    height: 15px;
+}
+
+.bullet {
+    text-indent: -10px;
+    padding-left: 10px;
 }
 
 .title {
@@ -37,4 +42,8 @@ body {
     font-weight: bold;
     flex: 1;
     display: flex;
+}
+
+a {
+    color: rgba(0, 0, 50, 0.75)
 }
