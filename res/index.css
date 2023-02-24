@@ -22,6 +22,8 @@ body {
     padding: 10px 15px;
     margin-top: 20px;
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
 }
 
 .br {
@@ -29,8 +31,8 @@ body {
 }
 
 .bullet {
-    text-indent: -10px;
-    padding-left: 10px;
+    text-indent: -11px;
+    padding-left: 11px;
 }
 
 .title {

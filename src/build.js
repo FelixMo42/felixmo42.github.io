@@ -21,7 +21,11 @@ async function load_sections() {
             .map((file_name) => fs.readFile(`${path}/${file_name}`))
     )
     
-    return snippets.map(f => f.toString()).map(parse).join("")
+    return snippets
+        .map(f => f.toString())
+        .sort((a, b) => a.includes("\n!pin") ? -1 : 1)
+        .map(parse)
+        .join("")
 }
 
 function get(lines, tag) {
