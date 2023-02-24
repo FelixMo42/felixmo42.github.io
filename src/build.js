@@ -38,7 +38,7 @@ function parse(source) {
     return (
         el(`div class="section" id="${id}"`,
             el('div class="title"',
-                el('div', title),
+                el(`a href="#${id}"`, title),
                 el('div', created),
             ),
             ...lines

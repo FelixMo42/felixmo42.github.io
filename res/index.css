@@ -38,10 +38,12 @@ body {
     display: flex;
 }
 
-.title div:first-child {
+.title a {
     font-weight: bold;
     flex: 1;
     display: flex;
+    color: black;
+    text-decoration: none;
 }
 
 a {
