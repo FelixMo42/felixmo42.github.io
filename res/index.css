@@ -38,6 +38,7 @@ body {
 .title {
     flex-direction: row;
     display: flex;
+    margin-bottom: 15px;
 }
 
 .title a {
