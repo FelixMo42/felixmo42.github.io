@@ -48,6 +48,7 @@ function parse(source) {
             ),
             ...lines
                 .filter(line => !line.startsWith("!"))
+                .filter((line, i) => !(line == "" && i == 0))
                 .map(line =>
                         line == "" ? el('div class="br"') : 
                         line.startsWith("-") ? el('div class="bullet"', line) :
