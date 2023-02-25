@@ -23,6 +23,7 @@ async function load_sections() {
     
     return snippets
         .map(f => f.toString())
+        .filter((f) => !f.includes("\n!hide"))
         .sort((a, b) => a.includes("\n!pin") ? -1 : 1)
         .map(parse)
         .join("")
