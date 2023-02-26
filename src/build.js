@@ -30,7 +30,12 @@ async function load_sections() {
 }
 
 function get(lines, tag) {
-    return lines.find(line => line.startsWith(`!${tag} `)).split(" ").slice(1).join(" ")
+    let line = lines.find(line => line.startsWith(`!${tag} `));
+    if (line != undefined) {
+        return line.split(" ").slice(1).join(" ")
+    } else {
+        return undefined
+    }
 }
 
 function parse(source) {
@@ -39,12 +44,13 @@ function parse(source) {
     let title = get(lines, "title")
     let id = get(lines, "id")
     let created = get(lines, "created")
+    let updated = get(lines, "updated")
 
     return (
         el(`div class="section" id="${id}"`,
             el('div class="title"',
                 el(`a href="#${id}"`, title),
-                el('div', created),
+                el('div', updated ? `^${updated}` : created),
             ),
             ...lines
                 .filter(line => !line.startsWith("!"))
