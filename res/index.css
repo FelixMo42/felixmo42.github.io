@@ -35,6 +35,10 @@ body {
     padding-left: 11px;
 }
 
+.tab {
+    text-indent: 20px;
+}
+
 .title {
     flex-direction: row;
     display: flex;

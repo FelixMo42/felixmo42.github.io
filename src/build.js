@@ -58,6 +58,7 @@ function parse(source) {
                 .map(line =>
                         line == "" ? el('div class="br"') : 
                         line.startsWith("-") ? el('div class="bullet"', line) :
+                        line.startsWith(" ") ? el('div class="tab"', line) :
                             el("div", line)
                     )
         )
