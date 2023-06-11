@@ -27,7 +27,7 @@ function build_post_body(post) {
     return page(
         get_date_from_post(post),
         el("div",
-            el("div class='h2'", `Night Market News Letter #${get_number_from_post(post)} - ${get_date_from_post(post)}`),
+            el("div class='h2'", `NM Newsletter #${get_number_from_post(post)} - ${get_date_from_post(post)}`),
             parse(rest.join("\n"))
         )
     ) 
@@ -48,7 +48,7 @@ async function html() {
 
     return page('Nocturnal',
         el("h3", "Night Market News Letters"),
-        posts.map(post => el(`a href="./nocturnal/${get_number_from_post(post)}.html"`,
+        ...posts.map(post => el(`a href="./nocturnal/${get_number_from_post(post)}.html"`,
             `Issue #${get_number_from_post(post)} - ${get_date_from_post(post)}`,
         )).join("<br>")
     )
