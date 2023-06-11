@@ -57,5 +57,5 @@ async function html() {
 
 
 export default async function() {
-    fs.writeFile('nocturnal.html', '<!DOCTYPE html>' + await html());
+    fs.writeFile('nocturnal.html', await html());
 }

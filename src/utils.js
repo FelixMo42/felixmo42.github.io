@@ -1,7 +1,7 @@
 import fs from "fs/promises"
 
 export function page(name, ...body) {
-    return el('html',
+    return "<!DOCTYPE html>" + el('html',
         el('head',
             el("title", name), 
             el('meta name="viewport" content="width=device-width, initial-scale=1"'),
