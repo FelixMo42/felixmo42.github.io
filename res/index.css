@@ -1,6 +1,12 @@
 body {
-    background-color: teal;
+    /* background-color: #008080; */
     margin: 0px;
+    margin-bottom: 100px;
+
+    /* send default font & font size */ 
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
 }
 
 .row {
@@ -21,9 +27,6 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     margin-top: 20px;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
-    font-size: 18px;
 }
 
 .br {
@@ -61,10 +64,7 @@ a {
     color: rgba(0, 0, 50, 0.75)
 }
 
-#bio {
-    margin-top: 0px;
-}
-
-#bio .title {
-    display: none;
+.h2 {
+    font-weight: bold;
+    font-size: 1.25em;
 }
