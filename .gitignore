@@ -1,6 +1,6 @@
 # We build html files direct into the root of the project so that it can be deployed to GH pages.
 # This should exclude built files, but keeps the source files.
 # Ideally all build files would be in a folder, but oh well.
-*.html
-!/src/**/*.html
-!/res/**/*.html
+# *.html
+# !/src/**/*.html
+# !/res/**/*.html
