@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Felix</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body {
+                background-color: #014d4e;
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .book {
+                width: 250px;
+                height: 350px;
+                min-width: 250px;
+                max-height: 350px;
+                margin: 20px;
+            }
+
+            #cover {
+                /* background-color: rgba(0, 0, 0, 0.1); */
+                text-align: justify;
+                text-align-last: justify;
+                color: #eeeeee;
+            }
+
+            #cover #overname {
+                font-size: 25px;
+                opacity: 60%;
+            }
+
+            a {
+                color: rgba(0, 0, 50, 0.75)
+            }
+
+            #cover #name {
+                font-family: "Glass Antiqua", cursive;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 60px;
+            }
+
+            #cover img {
+                border: 2px solid #aaaaaa;
+                border-radius: 10px;
+                overflow: hidden;
+                height: 180px;
+                width: 250px;
+                padding: 5px;
+                object-fit: cover;
+
+            }
+
+            #resume {
+                background-color: rgba(255, 255, 255, 0.25);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cover" class="book">
+            <div style="line-height: 0.8; ">
+                <span id="overname">Bienvenue au site de</span>
+                <span id="name">Felix Moses</span>
+            </div>
+            <div id="image">
+                <img src="./res/2.png">
+            </div>
+            <div style="font-size: 19px; border-bottom: 2px solid #aaaaaa; padding-bottom: 6px; color: #cccccc;">
+                I'm currently an <u>AI developer</u> and <u>a community organizer</u>.
+                Resident of <u>Davis CA</u> <3 <3.
+                Connect on <a>LinkedIn</a> and <a>IG</a>.
+            </div>
+        </div>
+
+        <div id="resume" class="book">
+            <div style="padding-top: 80px;">
+                <span style="font-size: 30px;">COVER LETTER</span><br>
+                AND<br>
+                <span style="font-size: 30px;">RESUME</span>
+            </div>
+        </div>
+    </body>
+</html>
