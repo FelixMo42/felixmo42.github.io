@@ -4,76 +4,111 @@
 <head>
     <title>Felix Moses</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
-
     <style>
+        html {
+            color: rgb(227, 226, 226);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.1em;
+        }
+
         body {
             margin: 0px;
-            background-color: #008080;
+            background-color: #064343;
             font-family: Arial, Helvetica, sans-serif;
             font-size: larger;
         }
 
         #main {
             margin: auto;
-            width: 400px;
+            width: 800px;
             padding-top: 20px;
         }
 
-        .block {
-            display: block;
-            padding: 20px;
-            margin-bottom: 10px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 100px;
-            text-align: center;
-            color: black;
-            text-decoration: none;
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: circle;
+            margin-top: 0px;
+        }
+
+        .d-range {
+            width: 125px;
+            display: inline-block;
+            opacity: 70%;
+        }
+
+        .job-desc {
+            padding-left: 125px;
+            padding-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #a469dc;
         }
     </style>
 </head>
 
 <body>
-    <div id="main">
-        <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" width="400px">
-            <style>
-                .small {
-                    font: 25px sans-serif;
-                    fill: rgba(255, 255, 255, 0.5);
-                }
+<div id="main">
 
-                .heavy {
-                    font: 60px sans-serif;
-                    font-family: "Poetsen One";
-                    fill: #ffa500;
-                    opacity: 0.7;
-                }
-            </style>
 
-            <text x="-1" y="20" textLength="400px" lengthAdjust="spacing" class="small">Bienvenue au site personel
-                de</text>
-            <text x="0" y="75" textLength="400px" lengthAdjust="spacingAndGlyphs" class="heavy">Felix Moses</text>
-        </svg>
+<h1 style="background-color: rgba(0, 0, 0, 0.1); padding: 20px;">Felix Moses</h1>
 
-        <a class="block" href="https://github.com/FelixMo42">
-            GitHub
-        </a>
+<img src="./image.jpg" width="200px" style="float: right; border: 1px solid rgb(177, 115, 0); padding: 5px; margin-left: 5px;">
 
-        <a class="block" href="https://www.linkedin.com/in/felix-moses-721935166/">
-            LinkedIn
-        </a>
+<p>I'm a software developer, EMT, mutual aid coordinator and writer with a passion for interesting people, puzzles, travel, and making the world a better place! I'm looking to live my life to the fullest and to set my self up in a career focused around systemic change.</p>
 
-        <a class="block" href="https://www.instagram.com/felixmo42/">
-            Instagram
-        </a>
+<p>My current quest is travaling the world sans plane; Trains, boats and buses abound! I love reading, playing cards, moral philosophy, cooking, nature and dancing.</p>
 
-        <a class="block"
-            href="https://docs.google.com/document/d/14xg8qjk4ep5mdAFq_A5BzcBb5_dI_12-5OMzYmiP20g/edit?usp=sharing">
-            Resume
-        </a>
-    </div>
+<p>I grew up mostly in Berkeley, and have lived some in San Fransico, Bethesda, Denver, Davis and Paris.</p>
+
+<p><a href="https://github.com/FelixMo42">Github</a>,
+<a href="https://www.linkedin.com/in/felix-moses-721935166/">LinkedIn</a>,
+<a href="https://www.instagram.com/felixmo42/">Instagram</a></p>
+
+<h2>Skills</h2>
+<ul>
+    <li>AI: RAG, Prompt Engeering & Vector DBs</li>
+    <li>Fullstack: Node, React Native & AWS</li>
+    <li>Volunteer Coordination and Onboarding</li>
+    <li>Certified EMT (From UC Davis Fire Department)</li>
+    <li>Native Frenglish speaker; Fluent in French & English</li>
+</ul>
+
+<h2>Work Experience</h2>
+<p style="margin-bottom: 0px;">
+    <span class="d-range">2023 - 2024</span><b>AI developer</b> at <b>Claim Manager</b> (Remote)
+</p>
+<p class="job-desc">
+    Worked on AI Projects for home insurance claim management software. 
+</p>
+
+<p style="margin-bottom: 0px;">
+    <span class="d-range">2022 - 2024</span><b>Community Coordinator</b> for <b>Davis Night Market</b> (Davis, CA)
+</p>
+<p class="job-desc">
+One of the most active volunteers at the organization and heavily involved in leadership. We reduce food waste and insecurity by collecting food from restaurants and grocery stores that would be thrown away and give it out for free.
+</p>
+
+<p>
+    <span class="d-range">2021 - 2023</span><b>Lead mobile developer</b> at <b>Motili</b> (Denver, CO)
+</p>
+<p class="job-desc">
+Primary developer responsible for mobile app enabling HVAC contractors to find, schedule, complete and bill for HVAC installs.  All features had to work offline and on antique phones.
+</p>
+
+<p>
+    <span class="d-range">2019 - 2020</span><b>Intern</b> at <b>Apprendre Sans Frontières</b> (Berkeley, CA)
+</p>
+<p class="job-desc">
+Helped create a Raspberry Pi powered kit that was sent to schools in remote areas of Senegal without internet access to help students learn.
+</p>
+
+
+</div>
 </body>
 
 </html>
