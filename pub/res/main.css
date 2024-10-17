@@ -32,6 +32,10 @@ ul {
     margin-top: 0px;
 }
 
+li {
+    margin-left: 30px;
+}
+
 /* LINK STUFF */
 
 a {
