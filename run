@@ -1,1 +1,1 @@
-deno run --allow-all src/cli.ts
+deno run --allow-all src/cli.ts $@

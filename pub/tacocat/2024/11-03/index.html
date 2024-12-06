@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="description" content="Photo gallery of the Moses Family" />
+
+        <link rel="apple-touch-icon" href="https://pix.tacocat.com/images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="https://pix.tacocat.com/images/favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://pix.tacocat.com/images/favicons/favicon-16x16.png" sizes="16x16" />
+        <link rel="mask-icon" href="https://pix.tacocat.com/images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+
+        <link rel="manifest" href="https://pix.tacocat.com/manifest.json" />
+
+        <meta name="theme-color" content="#fff" />
+
+        <style>
+            #svelte {
+                height: 100%;
+            }
+        </style>
+
+        
+		<link rel="modulepreload" href="https://pix.tacocat.com/_app/immutable/entry/start.850bHmSo.js">
+		<link rel="modulepreload" href="https://pix.tacocat.com/_app/immutable/chunks/scheduler.PEkGxqHg.js">
+		<link rel="modulepreload" href="https://pix.tacocat.com/_app/immutable/chunks/singletons.p4E5XUuK.js">
+		<link rel="modulepreload" href="https://pix.tacocat.com/_app/immutable/chunks/index.sH2SCs8_.js">
+		<link rel="modulepreload" href="https://pix.tacocat.com/_app/immutable/entry/app.qlunkKBf.js">
+		<link rel="modulepreload" href="https://pix.tacocat.com/_app/immutable/chunks/preload-helper.0HuHagjb.js">
+		<link rel="modulepreload" href="https://pix.tacocat.com/_app/immutable/chunks/index.48shnGiM.js">
+    </head>
+
+    <body>
+        <div id="svelte" style="display: contents">
+			<script>
+				{
+					__sveltekit_1x9zd6f = {
+						base: "",
+						env: null
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.850bHmSo.js"),
+						import("/_app/immutable/entry/app.qlunkKBf.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('/service-worker.js');
+						});
+					}
+				}
+			</script>
+		</div>
+        <noscript>
+            <p>This site requires JavaScript. Your browser does not support JavaScript or you've disabled it.</p>
+        </noscript>
+    </body>
+</html>
