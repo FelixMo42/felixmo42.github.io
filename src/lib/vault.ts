@@ -120,7 +120,7 @@ async function build(vault: Vault, title: string) {
         "<html>",
             "<head>",
                 `<title>${title}</title>`,
-                `<link rel="stylesheet" href="/res/main.css">`,
+                `<link rel="stylesheet" href="../res/main.css">`,
             "</head>",
             "<body>",
                 "<main>",
