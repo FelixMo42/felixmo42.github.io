@@ -13,6 +13,7 @@ body {
 main {
     margin: auto;
     width: 800px;
+    max-width: calc(100vw - 20px);
     padding-top: 20px;
 }
 
