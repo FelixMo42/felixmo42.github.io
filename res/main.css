@@ -19,13 +19,27 @@ main {
 /* HEADER STUFF */
 
 h1 {
-    border-bottom: 1px solid black;
+    margin-bottom: 5px;
 }
 
 h2 {
     margin-bottom: 20px;
     border-bottom: 1px solid black;
 }
+
+h3 {
+    font-size: inherit;
+    font-weight: inherit;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.author, .published {
+    font-style: italic;
+    margin: 0px;
+    opacity: 70%;
+}
+    
 
 /* LIST STUFF */
 
@@ -34,14 +48,14 @@ ul {
     margin-top: 0px;
 }
 
-li {
-    margin-left: 30px;
-}
-
 /* LINK STUFF */
 
 a {
     color: #693799;
+}
+
+sup a {
+    color: inherit;
 }
 
 /* TABLE STUFF */
